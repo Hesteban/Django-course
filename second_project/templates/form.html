@@ -1,0 +1,10 @@
+<!doctype html>
+{% extends "base.html" %}
+
+    {% block content_block %}
+        <form class="form-horizontal" method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+            </form>
+    {% endblock %}

@@ -1,0 +1,22 @@
+<!doctype html>
+{% extends "base.html" %}
+
+    {% block content_block %}
+        {% if users_rec %}
+            <table class="table">
+              <tr>
+                <th>First name</th>
+                <th>Second name</th>
+                <th>Email</th>
+              </tr>
+              {% for record in users_rec %}
+                <tr>
+                <td>{{record.first_name}}</td>
+                <td>{{record.second_name}}</td>
+                <td>{{record.email}}</td>
+              </tr>
+              {% endfor %}
+            </table>
+        {% else %}
+        {% endif %}
+    {% endblock %}

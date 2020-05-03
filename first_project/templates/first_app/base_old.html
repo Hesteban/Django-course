@@ -1,0 +1,15 @@
+<!doctype html>
+{% load static %}
+<html>
+    <head>
+        <title>Django project</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
+    </head>
+    <body>
+        <h1>Hello this a django project</h1>
+        <h2>
+            {{ insert_me }}
+        </h2>
+        <img src="{% static 'images/me.jpg' %}" alt="Ups, error">
+    </body>
+</html>

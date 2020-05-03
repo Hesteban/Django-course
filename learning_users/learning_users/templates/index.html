@@ -1,0 +1,13 @@
+<!doctype html>
+{% extends "base.html" %}
+
+    {% block content_block %}
+        <div class="jumbotron">
+            <h1>Welcome</h1>
+            {% if user.is_authenticated %}
+            <h2>You can see this because you are logged</h2>
+            {% else %}
+             <h2>Login first to see the content</h2>
+             {% endif %}
+        </div>
+    {% endblock %}

@@ -1,0 +1,25 @@
+<!doctype html>
+{% load static %}
+<html>
+    <head>
+        <title>Django project</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
+    </head>
+    <body>
+        <h1>Hello this a django project</h1>
+        {% if access_rec %}
+        <table>
+          <tr>
+            <th>Company name</th>
+            <th>date</th>
+          </tr>
+          {% for record in access_rec %}
+            <tr>
+            <td>{{record.name}}</td>
+            <td>{{record.date}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+     {% endif%}
+    </body>
+</html>

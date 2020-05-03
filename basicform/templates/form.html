@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Django project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+      <div class="jumbotron">
+        <h1>Form in Django</h1>
+        <p>go to /form</p>
+      </div>
+    </div>
+        <div class="container">
+            <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
